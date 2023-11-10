@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-12.5vw);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-12.5vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;;
+  }
+}
+
+.slide-left {
+  animation-name: slideLeft;
+  animation-duration: 400ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.slide-right {
+  animation-name: slideRight;
+  animation-duration: 400ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.appear {
+  animation-name: appear;
+  animation-duration: 200ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.disappear {
+  animation-name: disappear;
+  animation-duration: 200ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.custom-border-t,
+.custom-border-b,
+.custom-border-r,
+.custom-border-l {
+  position: relative;
+}
+
+.custom-border-t::after,
+.custom-border-b::after,
+.custom-border-r::after,
+.custom-border-l::after {
+  left: 10px;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.custom-border-t::before,
+.custom-border-b::before,
+.custom-border-r::before,
+.custom-border-l::before {
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  border-top: none;
+  border-bottom: none;
+}
+
+.custom-border-t::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-top: 1px solid #F0F0F0;
+}
+
+.custom-border-b::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.custom-border-r::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-right: 1px solid #F0F0F0;
+}
+
+.custom-border-l::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-left: 1px solid #F0F0F0;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+ 
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+ 
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+ 
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+ 
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+ 
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+ 
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+ 
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+ 
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+ 
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+ 
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+ 
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
