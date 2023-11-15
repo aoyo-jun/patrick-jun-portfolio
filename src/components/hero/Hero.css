@@ -1,0 +1,76 @@
+/* Animation classes */
+.slide-left {
+    animation-name: slideLeft;
+    animation-duration: 250ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+  
+.slide-right {
+    animation-name: slideRight;
+    animation-duration: 250ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+  
+.appear {
+    animation-name: appear;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+  
+.disappear {
+    animation-name: disappear;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}  
+
+
+/* Keyframes */
+@keyframes slideLeft {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-12.5vw);
+    }
+}
+  
+@keyframes slideRight {
+    from {
+      transform: translateX(-12.5vw);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+}
+  
+@keyframes appear {
+    from {
+      opacity: 0%;
+    }
+  
+    to {
+      opacity: 100%;;
+    }
+}
+  
+@keyframes disappear {
+    from {
+      opacity: 100%;
+    }
+  
+    to {
+      opacity: 0%;;
+    }
+}
+
+/* Utilities */
+
+.text-outline {
+  -webkit-text-stroke: 0.215vmin #141414;
+}
