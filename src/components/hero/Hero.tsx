@@ -47,7 +47,7 @@ export default function Header() {
                         <div 
                             onClick={() => OnCardClick()}
                             className={cn(
-                                "h-[74.75vh] w-[11vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center cursor-pointer z-10",
+                                "h-[74.75vh] w-[11vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center cursor-pointer z-10 overflow-hidden",
                                 isCardSlided === 1 && "slide-left",
                                 isCardSlided === 2 && "slide-right"
                             )}
@@ -65,7 +65,7 @@ export default function Header() {
                     {/* "Patrick" card outer div */}
                     <div className="absolute flex items-center justify-center h-[22.25vh] w-[37.5vw] z-10">
                         {/* "Patrick" card inner div */}
-                        <div className="h-[19.25vh] w-[36vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center">
+                        <div className="h-[19.25vh] w-[36vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center overflow-hidden">
                             <p className="unselectable text-[7.187vw] tracking-[1.438vw] text-[#F0F0F0] ml-[0.776vw] mb-[0.719vw] text-outline">PATRICK</p>
                         </div>
                     </div>
@@ -73,7 +73,8 @@ export default function Header() {
                 <div className="row-span-2 grid grid-cols-6">
                     {/* Cell 13 */}
                     <div id="cell-13" className="col-span-3 custom-border-l custom-border-t flex items-center justify-center">
-                        <div className="h-[9.17vh] w-[7.03vw] border-[1px] border-[#F0F0F0] rounded-xl flex items-center justify-center">
+                        {/* Click me div */}
+                        <div className="h-[9.17vh] w-[7.03vw] border-[1px] border-[#F0F0F0] rounded-xl flex items-center justify-center jiggle-horizontal overflow-hidden">
                             <img draggable="false" className="" src={click} alt="clickme" />
                         </div>
                     </div>
@@ -82,7 +83,7 @@ export default function Header() {
                         {/* "Jun" card outer div */}
                         <div className="absolute flex items-center justify-center h-[22.25vh] w-[18.750vw] z-10">
                             {/* "Jun" card inner div */}
-                            <div className="h-[19.25vh] w-[17.375vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center">
+                            <div className="h-[19.25vh] w-[17.375vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center overflow-hidden">
                                 <p className="unselectable text-[7.187vw] tracking-[1.438vw] text-[#F0F0F0] ml-[1.85vw] mb-[0.719vw] text-outline">JUN</p>
                             </div>
                         </div>
@@ -94,7 +95,7 @@ export default function Header() {
                         {/* "Front" card outer div */}
                         <div className="absolute flex items-center justify-center h-[22.385vh] w-[31.250vw] z-10">
                             {/* "Front" card inner div */}
-                            <div className="h-[19.25vh] w-[29.825vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center">
+                            <div className="h-[19.25vh] w-[29.825vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center overflow-hidden">
                                 <p className="unselectable text-[7.187vw] tracking-[1.438vw] text-[#F0F0F0] ml-[0.9vw] mb-[0.719vw] text-outline">FRONT</p>
                             </div>
                         </div>
@@ -122,7 +123,7 @@ export default function Header() {
                     {/* "Webdev" card outer div */}
                     <div className="absolute flex items-center justify-center h-[22.25vh] w-[37.5vw] z-10">
                         {/* "Webdev" card inner div */}
-                        <div className="h-[19.25vh] w-[36vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center">
+                        <div className="h-[19.25vh] w-[36vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center overflow-hidden">
                             <p className="unselectable text-[7.187vw] tracking-[1.438vw] text-[#F0F0F0] ml-[0.9vw] mb-[0.719vw] text-outline">WEBDEV</p>
                         </div>
                     </div>
@@ -164,7 +165,7 @@ export default function Header() {
                     <div className="absolute flex items-center justify-center h-[11.175vh] w-[6.25vw] z-10">
                         {/* Scroll button inner div */}
                         <div className="h-[8vh] w-[4.75vw] bg-[#F0F0F0] rounded-xl flex items-center justify-center">
-                            <img draggable="false" className="h-[6vh] w-[1.25vw]" src={scroll} alt="scroll" />
+                            <img draggable="false" className="h-[6vh] w-[1.25vw] jiggle-vertical" src={scroll} alt="scroll" />
                         </div>
                     </div>
                 </div>

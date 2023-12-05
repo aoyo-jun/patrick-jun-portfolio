@@ -14,8 +14,8 @@
 .custom-border-b::after,
 .custom-border-r::after,
 .custom-border-l::after {
-  left: 10px;
-  right: 10px;
+  left: 1.07vmin;
+  right: 1.07vmin;
   top: 0;
   bottom: 0;
   border-left: none;
@@ -26,8 +26,8 @@
 .custom-border-b::before,
 .custom-border-r::before,
 .custom-border-l::before {
-  top: 10px;
-  bottom: 10px;
+  top: 1.07vmin;
+  bottom: 1.07vmin;
   left: 0;
   right: 0;
   border-top: none;

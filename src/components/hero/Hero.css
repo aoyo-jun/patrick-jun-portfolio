@@ -27,6 +27,22 @@
     animation-fill-mode: forwards;
 }  
 
+.jiggle-horizontal {
+  animation-name: jiggleHorizontal;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}  
+
+.jiggle-vertical {
+  animation-name: jiggleVertical;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}  
+
 
 /* Keyframes */
 @keyframes slideLeft {
@@ -67,6 +83,20 @@
     to {
       opacity: 0%;;
     }
+}
+
+@keyframes jiggleHorizontal {
+  0% {transform: translateX(-0.175vw);}
+  33% {transform: translateX(-0.175vw);}
+  66% {transform: translateX(0.175vw);}
+  100% {transform: translateX(0.175vw);}
+}
+
+@keyframes jiggleVertical {
+  0% {transform: translateY(-0.2vh);}
+  33% {transform: translateY(-0.2vh);}
+  66% {transform: translateY(0.2vh);}
+  100% {transform: translateY(0.2vh);}
 }
 
 /* Utilities */
