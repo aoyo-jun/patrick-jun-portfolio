@@ -39,6 +39,8 @@
   position: absolute;
   pointer-events: none;
   border-top: 1px solid #F0F0F0;
+  transition: border 0.5s ease;
+  transition-delay: 200ms;
 }
 
 .custom-border-b::after {
@@ -46,6 +48,8 @@
   position: absolute;
   pointer-events: none;
   border-bottom: 1px solid #F0F0F0;
+  transition: border 0.5s ease;
+  transition-delay: 200ms;
 }
 
 .custom-border-r::before {
@@ -53,6 +57,8 @@
   position: absolute;
   pointer-events: none;
   border-right: 1px solid #F0F0F0;
+  transition: border 0.5s ease;
+  transition-delay: 200ms;
 }
 
 .custom-border-l::before {
@@ -60,6 +66,76 @@
   position: absolute;
   pointer-events: none;
   border-left: 1px solid #F0F0F0;
+  transition: border 0.5s ease;
+  transition-delay: 200ms;
+}
+
+/* Custom border for the grid - TRANSITION */
+.custom-border-trans-t,
+.custom-border-trans-b,
+.custom-border-trans-r,
+.custom-border-trans-l {
+  position: relative;
+}
+
+.custom-border-trans-t::after,
+.custom-border-trans-b::after,
+.custom-border-trans-r::after,
+.custom-border-trans-l::after {
+  left: 1.07vmin;
+  right: 1.07vmin;
+  top: 0;
+  bottom: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.custom-border-trans-t::before,
+.custom-border-trans-b::before,
+.custom-border-trans-r::before,
+.custom-border-trans-l::before {
+  top: 1.07vmin;
+  bottom: 1.07vmin;
+  left: 0;
+  right: 0;
+  border-top: none;
+  border-bottom: none;
+}
+
+.custom-border-trans-t::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-top: 1px solid transparent;
+  transition: border 0.5s ease;
+  transition-delay: 900ms;
+}
+
+.custom-border-trans-b::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.5s ease;
+  transition-delay: 900ms;
+}
+
+.custom-border-trans-r::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-right: 1px solid transparent;
+  transition: border 0.5s ease;
+  transition-delay: 900ms;
+}
+
+.custom-border-trans-l::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-left: 1px solid transparent;
+  transition: border 0.5s ease;
+  transition-delay: 900ms;
 }
 
 /* Utilities */
@@ -70,6 +146,15 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 html,
