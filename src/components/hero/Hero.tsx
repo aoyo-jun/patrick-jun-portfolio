@@ -1,12 +1,19 @@
+// CSS & Utils
 import { cn } from "../../lib/utils";
-import { Dispatch, SetStateAction} from "react";
 import "./Hero.css";
+
+// SVGs
 import linkedin from "../../svg/linkedin.svg";
 import github from "../../svg/github.svg";
 import scroll from "../../svg/scroll.svg";
 import click from "../../svg/click.svg";
 import question from "../../svg/question.svg";
+
+// Icons
 import { Mail, X } from "lucide-react";
+
+// Others
+import { Dispatch, SetStateAction} from "react";
 
 interface HeroProps {
     isCardSlided: number;
@@ -51,7 +58,7 @@ export default function Hero({
                 <div id="cell-10" className="row-span-7 custom-border-b custom-border-l">
                     {/* About Me card outer div */}
                     <div className="absolute flex items-center justify-center h-[77.75vh] w-[12.625vw]">
-                        {/* About Me Card inner div */}
+                        {/* About Me Card cover */}
                         <div 
                             onClick={() => OnCardClick()}
                             className={cn(
@@ -61,6 +68,10 @@ export default function Hero({
                             )}
                         >
                             <p className="unselectable rotate-270 text-[16vmin] tracking-[1.25vmin] text-[#3184D8] mr-[1.62vmin]">CREATIVE</p>
+                        </div>
+                        {/* About Me Card content */}
+                        <div className="absolute h-[72.25vh] w-[9.9vw] rounded-xl bg-[#141414] rotate-gradient after:blur-[0.5rem] flex-row gap-2.5">
+                            <p  className="mt-[4.5vmin] text-center text-[2.5vmin] font-[300] tracking-[0.1vmin] clip-text"><span className="text-[2.8vmin]">ABOUT ME</span> <br /> <br /> I'm a React <br /> front-end <br /> web developer <br /> passionate <br /> about websites <br /> with <br /> animations, <br /> whether <br /> 2D or 3D.</p>
                         </div>
                     </div>
                 </div>

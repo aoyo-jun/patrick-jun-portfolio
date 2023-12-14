@@ -1,3 +1,59 @@
+/* About me group */
+
+.rotate-gradient::before,
+.rotate-gradient::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #6bc7d1,
+    #6ba3d1,
+    #3b6dda,
+    #6ba3d1,
+    #6bc7d1);
+  animation: rotateGradient 7.5s linear infinite;
+}
+
+.clip-text {
+  background: linear-gradient(
+      var(--gradient-angle),
+      #6bc7d1,
+      #6b7ad1,
+      #3b4bda);
+  animation: rotateGradient 6s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Firefox fix since it doesn't support Houdini CSS yet */
+@-moz-document url-prefix(){
+  .rotate-gradient::before,
+  .rotate-gradient::after {
+    background: linear-gradient(
+      0deg,
+      #6bc7d1,
+      #6b7ad1,
+      #3b4bda);
+  }
+
+  .clip-text {
+    background: linear-gradient(
+      60deg,
+      #6bc7d1,
+      #6b7ad1,
+      #3b4bda);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+
+
 /* About me group - Animation classes */
 .slide-left {
   animation-name: slideLeft;
@@ -97,6 +153,11 @@
   60% {transform: translateX(0.5vw);}
   100% {transform: translateX(0);}
 }
+
+@keyframes rotateGradient {
+  0% {--gradient-angle: 0deg;}
+  100% {--gradient-angle: 360deg;}
+}
   
 
 
@@ -174,4 +235,10 @@
 /* Utilities */
 .text-outline {
   -webkit-text-stroke: 0.215vmin #141414;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
