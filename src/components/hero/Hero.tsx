@@ -70,8 +70,12 @@ export default function Hero({
                             <p className="unselectable rotate-270 text-[16vmin] tracking-[1.25vmin] text-[#3184D8] mr-[1.62vmin]">CREATIVE</p>
                         </div>
                         {/* About Me Card content */}
-                        <div className="absolute h-[72.25vh] w-[9.9vw] rounded-xl bg-[#141414] rotate-gradient after:blur-[0.5rem] flex-row gap-2.5">
-                            <p  className="mt-[4.5vmin] text-center text-[2.5vmin] font-[300] tracking-[0.1vmin] clip-text"><span className="text-[2.8vmin]">ABOUT ME</span> <br /> <br /> I'm a React <br /> front-end <br /> web developer <br /> passionate <br /> about websites <br /> with <br /> animations, <br /> whether <br /> 2D or 3D.</p>
+                        <div className="absolute h-[72.25vh] w-[9.9vw] rounded-xl bg-[#141414] rotate-gradient after:blur-[0.5rem] flex-row items-center justify-center">
+                            <p  className="mt-[4.5vmin] text-center text-[2.5vmin] font-[300] tracking-[0.1vmin] rotate-gradient-text">
+                                <span className="text-[2.8vmin]">ABOUT ME</span> <br /> <br /> Greetings! <br /> I'm Patrick Jun, <br /> a passionate <br />
+                                and creative <br /> front-end web <br /> developer <br /> with a flair <br /> for crafting <br /> interactive <br /> and visually<br />
+                                stunning <br /> websites. <br />
+                            </p>
                         </div>
                     </div>
                 </div>

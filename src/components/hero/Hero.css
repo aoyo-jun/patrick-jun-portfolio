@@ -9,20 +9,20 @@
   z-index: -1;
   background: conic-gradient(
     from var(--gradient-angle),
-    #6bc7d1,
-    #6ba3d1,
-    #3b6dda,
-    #6ba3d1,
-    #6bc7d1);
+    #6bd1d1,
+    #6b97d1,
+    #3b58da,
+    #6b97d1,
+    #6bd1d1);
   animation: rotateGradient 7.5s linear infinite;
 }
 
-.clip-text {
+.rotate-gradient-text {
   background: linear-gradient(
       var(--gradient-angle),
-      #6bc7d1,
-      #6b7ad1,
-      #3b4bda);
+      #6bd1d1,
+      #6b97d1,
+      #3b58da);
   animation: rotateGradient 6s linear infinite;
   background-clip: text;
   -webkit-background-clip: text;
@@ -35,19 +35,19 @@
   .rotate-gradient::after {
     background: linear-gradient(
       0deg,
-      #6bc7d1,
-      #6b7ad1,
-      #3b4bda);
+      #6bd1d1,
+      #6b97d1,
+      #3b58da);
   }
 
-  .clip-text {
+  .rotate-gradient-text {
     background: linear-gradient(
       60deg,
-      #6bc7d1,
-      #6b7ad1,
-      #3b4bda);
+      #6bd1d1,
+      #6b97d1,
+      #3b58da);
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;  
     color: transparent;
   }
 }

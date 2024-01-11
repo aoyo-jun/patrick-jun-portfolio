@@ -3,7 +3,7 @@ import Header from "./components/header/Header.tsx"
 import { useState } from "react";
 
 export default function App() {
-  const [isContactClicked, setIsContactClicked] = useState(0);
+    const [isContactClicked, setIsContactClicked] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [isCardSlided, setIsCardSlided] = useState(0);
 
