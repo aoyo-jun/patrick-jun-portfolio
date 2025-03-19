@@ -1,12 +1,10 @@
-function App() {
+import Header from "./components/header";
+
+export default function App() {
 
   return (
-    <>
-      <div className="font-bold">
-        aaaaaaaa
-      </div>
-    </>
+    <div className="h-screen w-screen">
+      <Header />
+    </div>
   )
 }
-
-export default App

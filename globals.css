@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --font-kodemono: "Kode Mono", monospace;
+  --font-koho: "KoHo", sans-serif;
+
+  --color-default-bg: #F8F3F5;
+  --color-default-primary: #EAE5E8;
+  --color-default-secondary: #B0F436;
+}
+
+html,
+body,
+:root {
+  height: 100%;
+}
