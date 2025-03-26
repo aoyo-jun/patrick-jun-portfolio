@@ -2,11 +2,14 @@
 
 @theme {
   --font-kodemono: "Kode Mono", monospace;
+  --font-spacemono: "Space Mono", monospace;
   --font-koho: "KoHo", sans-serif;
 
   --color-default-bg: #F8F3F5;
   --color-default-primary: #EAE5E8;
   --color-default-secondary: #B0F436;
+  --color-black-primary: #1E1E1E;
+  --color-black-bg: #151515;
 }
 
 html,
